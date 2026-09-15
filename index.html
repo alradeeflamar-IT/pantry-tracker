@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Pantry Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pantry Tracker</h1>    
+    <p>Keep track of your food and never forget what expires.</p>
+  </header>
+
+  <main>
+    <!-- Pantry Overview -->
+    <section class="overview-section"> 
+      <h2>Pantry Overview</h2> 
+      <div class="stats-container">
+        <div class="stat-card">
+          <h3 id="total-items">0</h3>
+          <p>Items</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 id="expiring-soon">0</h3>
+          <p>Expiring Soon</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 id="total-categories">0</h3>
+          <p>Categories</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Items Section -->
+    <section class="items-section">
+      <div class="section-header">
+        <h2>My Items</h2>
+        <button id="show-form-btn">+ Add Item</button>
+      </div>
+
+      <!-- Form (Hidden by default or shown on click) -->
+      <form id="item-form" class="hidden">
+        <h3>Add New Item</h3>
+        <label for="item-name">Item Name</label>
+        <input type="text" id="item-name" required placeholder="e.g., Milk">
+
+        <label for="item-category">Category</label>
+        <input type="text" id="item-category" required placeholder="e.g., Dairy">
+
+        <label for="item-expiry">Expiry Date</label>
+        <input type="date" id="item-expiry" required>
+
+        <div class="form-actions">
+          <button type="submit" id="save-btn">Save Item</button>
+          <button type="button" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Items List -->
+      <div id="items-list" class="items-grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
